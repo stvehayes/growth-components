@@ -8,8 +8,8 @@ import {
     Text,
 } from '@primer/react'
 
-function Banner(props) {
-    const { action, type } = props
+function Banner({ children, ...props }) {
+    const { title, type, action } = props
 
     return (
         <Box
@@ -26,6 +26,7 @@ function Banner(props) {
                 gap: '1rem',
                 flexDirection: 'row',
                 position: 'relative',
+                alignItems: 'center',
             }}
         >
             <Box
@@ -72,14 +73,21 @@ function Banner(props) {
                     gap: '1rem',
                     width: '100%',
                     flexDirection: ['column', 'column', 'row', 'row'],
+                    alignItems: 'center',
                 }}
             >
-                <Box sx={{ width: '100%' }}>
-                    <Heading as="h2" sx={{ fontSize: 2, lineHeight: '1' }}>
-                        {props.title || 'Banner Title'}
+                <Box sx={{ width: '100%', pr: [3, 3, 0, 0] }}>
+                    <Heading
+                        as="h2"
+                        sx={{
+                            fontSize: 2,
+                            lineHeight: '1.1',
+                        }}
+                    >
+                        {title || 'Banner Title'}
                     </Heading>
                     <Text sx={{ fontSize: 1, color: 'fg.muted' }}>
-                        {props.description || 'Write your description.'}
+                        {children || 'Write your description.'}
                     </Text>
                 </Box>
                 {/* <Box
@@ -90,7 +98,14 @@ function Banner(props) {
                     }}
                 > */}
                 {action && (
-                    <Button sx={{ alignSelf: 'flex-start' }}>Action</Button>
+                    <Button
+                        sx={{
+                            alignSelf: 'flex-start',
+                            m: [0, 0, 'auto 0', 'auto 0'],
+                        }}
+                    >
+                        Action
+                    </Button>
                 )}
                 <Box
                     sx={{
