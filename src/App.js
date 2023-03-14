@@ -38,9 +38,12 @@ function App() {
                 <Layout>
                     {types.map((type) => (
                         <Banner
+                            // One of: default, accent, attention, danger, done
                             type={type.type}
-                            title={type.title}
+                            // One of: false, true
                             action={type.action}
+                            // String
+                            title={type.title}
                         >
                             Lorem ipsum <Link>dolor sit amet</Link>, consectetur
                             adipiscing elit.

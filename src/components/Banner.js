@@ -89,13 +89,6 @@ function Banner({ children, ...props }) {
                         {children || 'Write your description.'}
                     </Text>
                 </Box>
-                {/* <Box
-                    sx={{
-                        display: 'flex',
-                        gap: '0.5rem',
-                        alignItems: 'center',
-                    }}
-                > */}
                 {action && (
                     <Button
                         sx={{
@@ -120,7 +113,6 @@ function Banner({ children, ...props }) {
                 >
                     <IconButton variant="invisible" icon={XIcon} />
                 </Box>
-                {/* </Box> */}
             </Box>
         </Box>
     )
