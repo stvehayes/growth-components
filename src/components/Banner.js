@@ -82,29 +82,31 @@ function Banner(props) {
                         {props.description || 'Write your description.'}
                     </Text>
                 </Box>
-                <Box
+                {/* <Box
                     sx={{
                         display: 'flex',
                         gap: '0.5rem',
                         alignItems: 'center',
                     }}
+                > */}
+                {action && (
+                    <Button sx={{ alignSelf: 'flex-start' }}>Action</Button>
+                )}
+                <Box
+                    sx={{
+                        position: [
+                            'absolute',
+                            'absolute',
+                            'relative',
+                            'relative',
+                        ],
+                        top: [2, 2, 0, 0],
+                        right: [2, 2, 0, 0],
+                    }}
                 >
-                    {action && <Button>Action</Button>}
-                    <Box
-                        sx={{
-                            position: [
-                                'absolute',
-                                'absolute',
-                                'relative',
-                                'relative',
-                            ],
-                            top: [2, 2, 0, 0],
-                            right: [2, 2, 0, 0],
-                        }}
-                    >
-                        <IconButton variant="invisible" icon={XIcon} />
-                    </Box>
+                    <IconButton variant="invisible" icon={XIcon} />
                 </Box>
+                {/* </Box> */}
             </Box>
         </Box>
     )

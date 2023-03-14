@@ -10,10 +10,10 @@ function App() {
                 <ColorModeSwitcher />
                 <Layout>
                     <Banner />
-                    <Banner type="accent" />
-                    <Banner type="attention" />
-                    <Banner type="danger" />
-                    <Banner type="done" />
+                    <Banner type="accent" action />
+                    <Banner type="attention" action />
+                    <Banner type="danger" action />
+                    <Banner type="done" action />
                 </Layout>
             </BaseStyles>
         </ThemeProvider>
