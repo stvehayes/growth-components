@@ -12,7 +12,7 @@ function Layout({ children }) {
                 flexDirection: 'column',
                 padding: '1rem',
                 boxSizing: 'border-box',
-                mt: [8, 8, 0, 0],
+                pt: [8, 8, 0, 0],
             }}
         >
             {children}
