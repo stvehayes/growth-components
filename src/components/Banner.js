@@ -9,13 +9,13 @@ import {
 } from '@primer/react'
 
 function Banner(props) {
-    const { type } = props
+    const { action, type } = props
 
     return (
         <Box
             sx={{
                 display: 'flex',
-                alignItems: 'center',
+                alignItems: ['flex-start', 'flex-start', 'center', 'center'],
                 width: '100%',
                 maxWidth: '768px',
                 border: '1px solid',
@@ -24,6 +24,8 @@ function Banner(props) {
                 mb: 3,
                 p: 3,
                 gap: '1rem',
+                flexDirection: 'row',
+                position: 'relative',
             }}
         >
             <Box
@@ -38,13 +40,14 @@ function Banner(props) {
                             : type === 'done'
                             ? 'done.subtle'
                             : 'canvas.subtle',
-                    alignSelf: 'start',
-                    borderRadius: 50,
+                    borderRadius: 100,
+                    height: '40px',
+                    width: '40px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    padding: '12px',
-                    my: 'auto',
+                    alignSelf: 'flex-start',
+                    flexShrink: 0,
                 }}
             >
                 <StyledOcticon
@@ -63,17 +66,45 @@ function Banner(props) {
                     }}
                 />
             </Box>
-            <Box sx={{ width: '100%' }}>
-                <Heading as="h2" sx={{ fontSize: 2, lineHeight: '1' }}>
-                    {props.title || 'Banner Title'}
-                </Heading>
-                <Text sx={{ fontSize: 1, color: 'fg.muted' }}>
-                    {props.description || 'Write your description.'}
-                </Text>
-            </Box>
-            <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                <Button>Action</Button>
-                <IconButton variant="invisible" icon={XIcon} />
+            <Box
+                sx={{
+                    display: 'flex',
+                    gap: '1rem',
+                    width: '100%',
+                    flexDirection: ['column', 'column', 'row', 'row'],
+                }}
+            >
+                <Box sx={{ width: '100%' }}>
+                    <Heading as="h2" sx={{ fontSize: 2, lineHeight: '1' }}>
+                        {props.title || 'Banner Title'}
+                    </Heading>
+                    <Text sx={{ fontSize: 1, color: 'fg.muted' }}>
+                        {props.description || 'Write your description.'}
+                    </Text>
+                </Box>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        gap: '0.5rem',
+                        alignItems: 'center',
+                    }}
+                >
+                    {action && <Button>Action</Button>}
+                    <Box
+                        sx={{
+                            position: [
+                                'absolute',
+                                'absolute',
+                                'relative',
+                                'relative',
+                            ],
+                            top: [2, 2, 0, 0],
+                            right: [2, 2, 0, 0],
+                        }}
+                    >
+                        <IconButton variant="invisible" icon={XIcon} />
+                    </Box>
+                </Box>
             </Box>
         </Box>
     )
