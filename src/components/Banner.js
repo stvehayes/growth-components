@@ -75,7 +75,7 @@ function Banner({ children, ...props }) {
                     alignItems: 'center',
                 }}
             >
-                <Box sx={{ width: '100%', pr: [3, 3, 0, 0] }}>
+                <Box sx={{ width: '100%', pr: [2, 2, 0, 0] }}>
                     <Heading
                         as="h2"
                         sx={{
