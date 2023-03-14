@@ -1,4 +1,4 @@
-import { ThemeProvider, BaseStyles, Link, Text } from '@primer/react'
+import { ThemeProvider, BaseStyles, Link } from '@primer/react'
 import Layout from './layouts/Layout'
 import ColorModeSwitcher from './components/ColorModeSwitcher'
 import Banner from './components/Banner'

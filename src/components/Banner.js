@@ -26,7 +26,6 @@ function Banner({ children, ...props }) {
                 gap: '1rem',
                 flexDirection: 'row',
                 position: 'relative',
-                alignItems: 'center',
             }}
         >
             <Box
