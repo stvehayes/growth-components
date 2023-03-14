@@ -1,13 +1,20 @@
-import { ThemeProvider, BaseStyles } from '@primer/react'
+import { ThemeProvider, BaseStyles, Box } from '@primer/react'
+import Layout from './layouts/Layout'
+import ColorModeSwitcher from './components/ColorModeSwitcher'
+import Banner from './components/Banner'
 
-import Playground from './Playground'
-import ColorModeSwitcher from './ColorModeSwitcher'
 function App() {
     return (
-        <ThemeProvider colorMode="auto">
+        <ThemeProvider colorMode="light">
             <BaseStyles>
-                <Playground />
                 <ColorModeSwitcher />
+                <Layout>
+                    <Banner />
+                    <Banner type="accent" />
+                    <Banner type="attention" />
+                    <Banner type="danger" />
+                    <Banner type="done" />
+                </Layout>
             </BaseStyles>
         </ThemeProvider>
     )
