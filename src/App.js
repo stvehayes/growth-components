@@ -15,7 +15,7 @@ function App() {
         <ThemeProvider colorMode="light">
             <BaseStyles>
                 <ColorModeSwitcher />
-                <Box sx={{ p: 3 }}>
+                <Box sx={{ bg: 'canvas.default', p: 3 }}>
                     <UnderlineNav sx={{ bg: 'canvas.default' }}>
                         <UnderlineNav.Link href="/" selected={checkRoute('/')}>
                             Banners
