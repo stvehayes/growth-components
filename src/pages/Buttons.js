@@ -35,7 +35,6 @@ function Buttons() {
                 <Button sx={sx}>Buy Enterprise</Button>
                 <Button>Learn more</Button>
             </ButtonGroup>
-            <Divider />
             <Box sx={{ mb: 2 }}>
                 <StyledOcticon color="danger.emphasis" icon={XCircleFillIcon} />
                 <Text
