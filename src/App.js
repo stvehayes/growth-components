@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import ColorModeSwitcher from './components/ColorModeSwitcher'
 import Banners from './pages/Banners'
 import Buttons from './pages/Buttons'
+import DashboardPromo from './pages/DashboardPromo'
 
 function App() {
     const location = useLocation().pathname
@@ -21,16 +22,21 @@ function App() {
                             Banners
                         </UnderlineNav.Link>
                         <UnderlineNav.Link
-                            href="/button"
-                            selected={checkRoute('/button')}
+                            href="/buttons" selected={checkRoute('/buttons')}
                         >
                             Buttons
+                        </UnderlineNav.Link>
+                        <UnderlineNav.Link
+                            href="/Promo" selected={checkRoute('/Promo')}
+                        >
+                            Dashboard promotion
                         </UnderlineNav.Link>
                     </UnderlineNav>
                 </Box>
                 <Routes>
                     <Route path="/" element={<Banners />} />
                     <Route path="/button" element={<Buttons />} />
+                    <Route path="/Promo" element={<DashboardPromo />} />
                 </Routes>
             </BaseStyles>
         </ThemeProvider>
