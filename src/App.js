@@ -22,21 +22,23 @@ function App() {
                             Banners
                         </UnderlineNav.Link>
                         <UnderlineNav.Link
-                            href="/buttons" selected={checkRoute('/buttons')}
+                            href="/buttons"
+                            selected={checkRoute('/buttons')}
                         >
                             Buttons
                         </UnderlineNav.Link>
                         <UnderlineNav.Link
-                            href="/Promo" selected={checkRoute('/Promo')}
+                            href="/promo"
+                            selected={checkRoute('/promo')}
                         >
-                            Dashboard promotion
+                            Promo
                         </UnderlineNav.Link>
                     </UnderlineNav>
                 </Box>
                 <Routes>
                     <Route path="/" element={<Banners />} />
-                    <Route path="/button" element={<Buttons />} />
-                    <Route path="/Promo" element={<DashboardPromo />} />
+                    <Route path="/buttons" element={<Buttons />} />
+                    <Route path="/promo" element={<DashboardPromo />} />
                 </Routes>
             </BaseStyles>
         </ThemeProvider>
