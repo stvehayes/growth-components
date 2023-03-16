@@ -69,7 +69,18 @@ function Promo({ children, ...props }) {
                         right: 2,
                     }}
                 >
-                    <IconButton variant="invisible" icon={XIcon} />
+                    <IconButton
+                        sx={{
+                            svg: {
+                                fill: hasImage && 'white',
+                            },
+                            '&:hover': {
+                                bg: hasImage && 'rgba(0, 0, 0, 0.15)',
+                            },
+                        }}
+                        variant="invisible"
+                        icon={XIcon}
+                    />
                 </Box>
             </Box>
         </Box>

@@ -20,7 +20,7 @@ function DashboardPromo() {
         {
             action: 'Learn more',
             hasImage: false,
-            hasLogo: false,
+            hasLogo: true,
             logo: 'Galaxy',
             title: 'This is a logo dashboard promo',
         },
