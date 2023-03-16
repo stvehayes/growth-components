@@ -1,4 +1,4 @@
-import { MarkGithubIcon, VersionsIcon, XIcon } from '@primer/octicons-react'
+import { MarkGithubIcon, XIcon } from '@primer/octicons-react'
 import { Box, Button, Heading, IconButton, Text } from '@primer/react'
 
 function Promo({ children, ...props }) {
