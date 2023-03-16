@@ -35,7 +35,7 @@ function Buttons() {
                 <Button sx={sx}>Buy Enterprise</Button>
                 <Button>Learn more</Button>
             </ButtonGroup>
-            <Box sx={{ mb: 2 }}>
+            <Box sx={{ mt: 4, mb: 2 }}>
                 <StyledOcticon color="danger.emphasis" icon={XCircleFillIcon} />
                 <Text
                     sx={{

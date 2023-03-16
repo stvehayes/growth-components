@@ -5,7 +5,7 @@ function Layout({ children }) {
             sx={{
                 bg: 'canvas.default',
                 height: '100vh',
-                width: '100vw',
+                width: '100%',
                 display: ['block', 'block', 'flex', 'flex'],
                 alignItems: 'center',
                 justifyContent: 'center',
