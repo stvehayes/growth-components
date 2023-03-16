@@ -1,5 +1,5 @@
 import Layout from '../layouts/Layout'
-import Banner from '../components/Banner'
+import Banner from '../components/banner/Banner'
 import { Link } from '@primer/react'
 
 function Banners() {

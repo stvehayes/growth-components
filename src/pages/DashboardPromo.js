@@ -1,5 +1,5 @@
 import Layout from '../layouts/Layout'
-import Promo from '../components/Promo'
+import Promo from '../components/promo/Promo'
 import { Link } from '@primer/react'
 
 function DashboardPromo() {
