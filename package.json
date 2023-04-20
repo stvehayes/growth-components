@@ -10,6 +10,7 @@
         "@primer/primitives": "^7.11.1",
         "@primer/react": "^35.20.0",
         "eslint": "^8.35.0",
+        "framer-motion": "^10.12.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-is": "^16.8.0",

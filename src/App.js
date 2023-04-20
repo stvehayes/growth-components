@@ -6,6 +6,7 @@ import Banners from './pages/Banners'
 import Buttons from './pages/Buttons'
 import Dialogs from './pages/Dialogs'
 import DashboardPromo from './pages/DashboardPromo'
+import Tips from './pages/Tips'
 
 function App() {
     const routes = [
@@ -24,6 +25,10 @@ function App() {
         {
             path: '/dialog',
             element: <Dialogs />,
+        },
+        {
+            path: '/tip',
+            element: <Tips />,
         },
     ]
     return (

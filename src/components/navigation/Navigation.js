@@ -25,6 +25,10 @@ function Navigation() {
             path: '/dialog',
             title: 'Dialog',
         },
+        {
+            path: '/tip',
+            title: 'Tip',
+        },
     ]
 
     return (

@@ -4,7 +4,7 @@ function Layout({ children }) {
         <Box
             sx={{
                 bg: 'canvas.default',
-                height: '100vh',
+                height: '90vh',
                 width: '100%',
                 display: ['block', 'block', 'flex', 'flex'],
                 alignItems: 'center',
