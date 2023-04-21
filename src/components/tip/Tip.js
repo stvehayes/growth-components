@@ -20,10 +20,8 @@ function Tip({ children, ...props }) {
                 alignItems: 'center',
                 justifyContent: 'center',
                 width: '100%',
-                border: '1px solid',
+                borderTop: '1px solid',
                 borderColor: 'border.default',
-                borderRadius: 6,
-                mb: 3,
                 p: 3,
                 gap: '1rem',
                 flexDirection: ['column', 'column', 'row', 'row'],
@@ -66,7 +64,7 @@ function Tip({ children, ...props }) {
                         <Heading
                             as="p"
                             sx={{
-                                fontSize: 2,
+                                fontSize: '0.875rem',
                                 lineHeight: '1.5',
                                 fontWeight: 'normal',
                                 textAlign: ['center', 'center', 'left', 'left'],
