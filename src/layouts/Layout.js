@@ -24,7 +24,6 @@ function Layout({ children }) {
                     width: '100%',
                     maxWidth: 925,
                     mt: [0, 0, 72, 72],
-                    // m: '48px auto 0 auto',
                 }}
             >
                 {children}
