@@ -1,13 +1,8 @@
 import { useState } from 'react'
-import { Box, Heading, Link, StyledOcticon, Text } from '@primer/react'
+import { Box, Link, Text } from '@primer/react'
 import Layout from '../layouts/Layout'
 import Tip from '../components/tip/Tip'
 import tips from '../lib/data'
-import {
-    CheckCircleFillIcon,
-    CheckCircleIcon,
-    CheckIcon,
-} from '@primer/octicons-react'
 import PR from '../components/pr/PR'
 
 function Dialogs() {
