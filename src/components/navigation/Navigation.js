@@ -32,8 +32,17 @@ function Navigation() {
     ]
 
     return (
-        <Box sx={{ bg: 'canvas.default', p: 3 }}>
-            <UnderlineNav sx={{ bg: 'canvas.default' }}>
+        <Box
+            sx={{
+                bg: 'canvas.default',
+                px: 3,
+                py: 8,
+                m: '0 auto',
+            }}
+        >
+            <UnderlineNav
+                sx={{ bg: 'canvas.default', maxWidth: 925, m: '0 auto' }}
+            >
                 {nav.map((item) => (
                     <UnderlineNav.Link
                         href={item.path}

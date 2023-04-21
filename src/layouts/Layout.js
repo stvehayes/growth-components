@@ -4,18 +4,31 @@ function Layout({ children }) {
         <Box
             sx={{
                 bg: 'canvas.default',
-                height: '90vh',
+                height: '100vh',
                 width: '100%',
                 display: ['block', 'block', 'flex', 'flex'],
                 alignItems: 'center',
-                justifyContent: 'center',
+                alignContent: 'center',
                 flexDirection: 'column',
                 padding: '1rem',
                 boxSizing: 'border-box',
+                m: '0 auto',
                 pt: [8, 8, 0, 0],
             }}
         >
-            {children}
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    width: '100%',
+                    maxWidth: 925,
+                    mt: [0, 0, 72, 72],
+                    // m: '48px auto 0 auto',
+                }}
+            >
+                {children}
+            </Box>
         </Box>
     )
 }

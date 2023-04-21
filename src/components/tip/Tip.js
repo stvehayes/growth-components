@@ -20,7 +20,6 @@ function Tip({ children, ...props }) {
                 alignItems: 'center',
                 justifyContent: 'center',
                 width: '100%',
-                maxWidth: '768px',
                 border: '1px solid',
                 borderColor: 'border.default',
                 borderRadius: 6,
