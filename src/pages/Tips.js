@@ -22,6 +22,19 @@ function Dialogs() {
 
     return (
         <Layout>
+            <Text
+                sx={{
+                    fontSize: '0.75rem',
+                    textAlign: 'center',
+                    fontFamily: 'mono',
+                    width: '100%',
+                    mb: 3,
+                    color: 'fg.subtle',
+                }}
+            >
+                Note: The PR view is only one specific use-case for this
+                component.
+            </Text>
             <Box
                 sx={{
                     border: '1px solid',
