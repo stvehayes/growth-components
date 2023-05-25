@@ -7,27 +7,66 @@ function Banners() {
         {
             type: 'default',
             title: 'This is a default banner',
-            action: false,
+            actions: [],
         },
         {
             type: 'accent',
             title: 'This is an accent banner',
-            action: true,
+            actions: [
+                {
+                    text: 'Action',
+                    href: '/',
+                    variant: 'default',
+                },
+            ],
         },
         {
             type: 'attention',
             title: 'This is an attention banner',
-            action: true,
+            actions: [
+                {
+                    text: 'Action',
+                    href: '/',
+                    variant: 'default',
+                },
+                {
+                    text: 'Learn more',
+                    href: '/',
+                    variant: 'invisible',
+                },
+            ],
         },
         {
             type: 'danger',
             title: 'This is a danger banner',
-            action: true,
+            actions: [
+                {
+                    text: 'Action',
+                    href: '/',
+                    variant: 'default',
+                },
+                {
+                    text: 'Learn more',
+                    href: '/',
+                    variant: 'invisible',
+                },
+            ],
         },
         {
             type: 'done',
             title: 'This is a done banner',
-            action: true,
+            actions: [
+                {
+                    text: 'Action',
+                    href: '/',
+                    variant: 'default',
+                },
+                {
+                    text: 'Learn more',
+                    href: '/',
+                    variant: 'invisible',
+                },
+            ],
         },
     ]
 
@@ -38,7 +77,7 @@ function Banners() {
                     // One of: default, accent, attention, danger, done
                     type={type.type}
                     // One of: false, true
-                    action={type.action}
+                    actions={type.actions}
                     // String
                     title={type.title}
                 >

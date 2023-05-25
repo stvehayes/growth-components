@@ -9,7 +9,7 @@ import {
 } from '@primer/react'
 
 function Banner({ children, ...props }) {
-    const { title, type, action } = props
+    const { title, type, actions } = props
 
     return (
         <Box
@@ -88,16 +88,28 @@ function Banner({ children, ...props }) {
                         {children || 'Write your description.'}
                     </Text>
                 </Box>
-                {action && (
-                    <Button
+                {actions.length != 0 && (
+                    <Box
                         sx={{
-                            alignSelf: 'flex-start',
-                            m: [0, 0, 'auto 0', 'auto 0'],
+                            display: 'flex',
+                            gap: 2,
+                            flexDirection: [
+                                'row',
+                                'row',
+                                'row-reverse',
+                                'row-reverse',
+                            ],
+                            width: ['100%', '100%', 'auto', 'auto'],
                         }}
                     >
-                        Action
-                    </Button>
+                        {actions.map((action) => (
+                            <Button variant={action.variant}>
+                                {action.text}
+                            </Button>
+                        ))}
+                    </Box>
                 )}
+
                 <Box
                     sx={{
                         position: [
