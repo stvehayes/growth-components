@@ -88,7 +88,7 @@ function Banner({ children, ...props }) {
                         {children || 'Write your description.'}
                     </Text>
                 </Box>
-                {actions.length != 0 && (
+                {actions.length !== 0 && (
                     <Box
                         sx={{
                             display: 'flex',

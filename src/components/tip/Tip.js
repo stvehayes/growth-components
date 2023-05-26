@@ -2,11 +2,20 @@ import {
     ChevronLeftIcon,
     ChevronRightIcon,
     LightBulbIcon,
+    XIcon,
 } from '@primer/octicons-react'
 import { motion } from 'framer-motion'
-import { Box, Heading, IconButton, StyledOcticon, Text } from '@primer/react'
+import {
+    Box,
+    Button,
+    Heading,
+    IconButton,
+    StyledOcticon,
+    Text,
+} from '@primer/react'
 
 function Tip({ children, ...props }) {
+    const { hasMultiple } = props
     const variants = {
         enter: { opacity: 0, y: 20 },
         center: { opacity: 1, y: 0 },
@@ -17,6 +26,7 @@ function Tip({ children, ...props }) {
         <Box
             sx={{
                 display: 'flex',
+
                 alignItems: 'center',
                 justifyContent: 'center',
                 width: '100%',
@@ -75,31 +85,56 @@ function Tip({ children, ...props }) {
                     </motion.div>
                 </Box>
             </Box>
+            {hasMultiple && (
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexShrink: 0,
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                    }}
+                >
+                    <IconButton
+                        onClick={props.prevClick}
+                        variant="invisible"
+                        icon={ChevronLeftIcon}
+                    />
+                    <Text
+                        sx={{
+                            margin: 0,
+                            padding: 0,
+                        }}
+                    >
+                        {props.index + 1} of {props.total}
+                    </Text>
+                    <IconButton
+                        onClick={props.nextClick}
+                        variant="invisible"
+                        icon={ChevronRightIcon}
+                    />
+                </Box>
+            )}
             <Box
                 sx={{
                     display: 'flex',
-                    flexShrink: 0,
-                    alignItems: 'center',
-                    gap: '0.5rem',
+                    gap: '1rem',
                 }}
             >
+                <Button>Request feature</Button>
                 <IconButton
-                    onClick={props.prevClick}
+                    onClick={props.closeClick}
                     variant="invisible"
-                    icon={ChevronLeftIcon}
-                />
-                <Text
+                    icon={XIcon}
                     sx={{
-                        margin: 0,
-                        padding: 0,
+                        position: [
+                            'absolute',
+                            'absolute',
+                            'relative',
+                            'relative',
+                        ],
+                        top: [2, 2, 0, 0],
+                        right: [2, 2, 0, 0],
                     }}
-                >
-                    {props.index + 1} of {props.total}
-                </Text>
-                <IconButton
-                    onClick={props.nextClick}
-                    variant="invisible"
-                    icon={ChevronRightIcon}
                 />
             </Box>
         </Box>
