@@ -9,7 +9,7 @@ import {
 } from '@primer/react'
 
 function Banner({ children, ...props }) {
-    const { title, type, actions } = props
+    const { actions, icon, inline, title, type } = props
 
     return (
         <Box
@@ -17,10 +17,11 @@ function Banner({ children, ...props }) {
                 display: 'flex',
                 alignItems: ['flex-start', 'flex-start', 'center', 'center'],
                 width: '100%',
-                border: '1px solid',
+                border: inline ? 'none' : '1px solid',
+                borderTop: inline ? '1px solid' : 'none',
                 borderColor: 'border.default',
-                borderRadius: 6,
-                mb: 3,
+                borderRadius: inline ? 0 : 6,
+                mb: inline ? 0 : 3,
                 p: 3,
                 gap: '1rem',
                 flexDirection: 'row',
@@ -50,7 +51,7 @@ function Banner({ children, ...props }) {
                 }}
             >
                 <StyledOcticon
-                    icon={VersionsIcon}
+                    icon={icon || VersionsIcon}
                     sx={{
                         color:
                             type === 'accent'
