@@ -163,6 +163,7 @@ function Banners() {
                         },
                     ]}
                     title="Code 55% faster with GitHub Copilot"
+                    trial="false"
                 >
                     Try <Link href="/">GitHub Copilot</Link>, and the{' '}
                     <Link href="/">GitHub Pull Requests and Issues</Link>{' '}

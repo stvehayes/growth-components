@@ -14,7 +14,7 @@ function DashboardPromo() {
             action: 'Learn more',
             hasImage: true,
             hasLogo: false,
-            image: 'https://source.unsplash.com/random/350x200',
+            image: 'https://source.unsplash.com/random',
             title: 'This is an image dashboard promo',
         },
         {

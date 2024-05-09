@@ -45,6 +45,7 @@ function Dialogs() {
             >
                 <PR />
                 <Tip
+                    hasMultiple
                     index={tipIndex}
                     total={tips.length}
                     nextClick={handleNextClick}

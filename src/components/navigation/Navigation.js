@@ -14,8 +14,12 @@ function Navigation() {
             title: 'Banners',
         },
         {
-            path: '/buttons',
-            title: 'Buttons',
+            path: '/tip',
+            title: 'Tip',
+        },
+        {
+            path: '/trial',
+            title: 'Trial',
         },
         {
             path: '/promo',
@@ -24,10 +28,6 @@ function Navigation() {
         {
             path: '/dialog',
             title: 'Dialog',
-        },
-        {
-            path: '/tip',
-            title: 'Tip',
         },
     ]
 

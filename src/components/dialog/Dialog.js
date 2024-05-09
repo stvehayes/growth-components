@@ -29,7 +29,7 @@ function Dialog({ children, ...props }) {
             >
                 <Box
                     sx={{
-                        backgroundImage: 'url(https://placekitten.com/400/200)',
+                        background: `url('https://source.unsplash.com/random')`,
                         height: '200px',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
@@ -41,7 +41,7 @@ function Dialog({ children, ...props }) {
                     }}
                 >
                     <Heading as="h1" sx={{ fontSize: 4 }}>
-                        {title || 'Dialog title'}
+                        {title || 'Buy our thing'}
                     </Heading>
                     <Text
                         sx={{
@@ -49,7 +49,8 @@ function Dialog({ children, ...props }) {
                             color: 'fg.muted',
                         }}
                     >
-                        {children || 'Write some content here.'}
+                        {children ||
+                            'This is a long dialog meant to sell features and use a pretty image above.'}
                     </Text>
                     <Box
                         sx={{

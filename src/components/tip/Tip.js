@@ -101,6 +101,7 @@ function Tip({ children, ...props }) {
                     />
                     <Text
                         sx={{
+                            fontSize: 1,
                             margin: 0,
                             padding: 0,
                         }}
@@ -120,7 +121,7 @@ function Tip({ children, ...props }) {
                     gap: '1rem',
                 }}
             >
-                <Button>Request feature</Button>
+                {/* <Button>Request feature</Button> */}
                 <IconButton
                     onClick={props.closeClick}
                     variant="invisible"

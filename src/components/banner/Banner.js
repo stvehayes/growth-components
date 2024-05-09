@@ -1,4 +1,4 @@
-import { VersionsIcon, XIcon } from '@primer/octicons-react'
+import { InfoIcon, VersionsIcon, XIcon } from '@primer/octicons-react'
 import {
     Box,
     Button,
@@ -9,7 +9,16 @@ import {
 } from '@primer/react'
 
 function Banner({ children, ...props }) {
-    const { actions, icon, inline, title, type } = props
+    const {
+        actions,
+        icon,
+        inline,
+        noDescription,
+        hasTrial,
+        state,
+        title,
+        type,
+    } = props
 
     return (
         <Box
@@ -30,28 +39,55 @@ function Banner({ children, ...props }) {
                 position: 'relative',
             }}
         >
-            <Box
-                sx={{
-                    bg:
-                        type === 'accent'
-                            ? 'accent.subtle'
-                            : type === 'attention'
-                            ? 'attention.subtle'
-                            : type === 'danger'
-                            ? 'danger.subtle'
-                            : type === 'done'
-                            ? 'done.subtle'
-                            : 'canvas.subtle',
-                    borderRadius: 100,
-                    height: '40px',
-                    width: '40px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    alignSelf: 'flex-start',
-                    flexShrink: 0,
-                }}
-            >
+            {!hasTrial && (
+                <Box
+                    sx={{
+                        height: '40px',
+                        width: '40px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: 100,
+                        alignSelf: 'flex-start',
+                        bg:
+                            type === 'accent'
+                                ? 'accent.subtle'
+                                : type === 'attention'
+                                  ? 'attention.subtle'
+                                  : type === 'danger'
+                                    ? 'danger.subtle'
+                                    : type === 'done'
+                                      ? 'done.subtle'
+                                      : 'canvas.subtle',
+                        color:
+                            type === 'accent'
+                                ? 'accent.emphasis'
+                                : type === 'attention'
+                                  ? 'attention.emphasis'
+                                  : type === 'danger'
+                                    ? 'danger.emphasis'
+                                    : type === 'done'
+                                      ? 'done.emphasis'
+                                      : 'fg.default',
+                    }}
+                >
+                    <VersionsIcon />
+                </Box>
+            )}
+            {hasTrial && (
+                <StyledOcticon
+                    icon={InfoIcon}
+                    sx={{
+                        color:
+                            type === 'attention'
+                                ? 'attention.fg'
+                                : type === 'danger'
+                                  ? 'severe.fg'
+                                  : 'accent.emphasis',
+                    }}
+                />
+            )}
+            {!type === 'trial' && (
                 <StyledOcticon
                     icon={icon || VersionsIcon}
                     sx={{
@@ -59,15 +95,15 @@ function Banner({ children, ...props }) {
                             type === 'accent'
                                 ? 'accent.emphasis'
                                 : type === 'attention'
-                                ? 'attention.emphasis'
-                                : type === 'danger'
-                                ? 'danger.emphasis'
-                                : type === 'done'
-                                ? 'done.emphasis'
-                                : 'fg.default',
+                                  ? 'attention.emphasis'
+                                  : type === 'danger'
+                                    ? 'danger.emphasis'
+                                    : type === 'done'
+                                      ? 'done.emphasis'
+                                      : 'fg.default',
                     }}
                 />
-            </Box>
+            )}
             <Box
                 sx={{
                     display: 'flex',
@@ -78,18 +114,23 @@ function Banner({ children, ...props }) {
                 }}
             >
                 <Box sx={{ width: '100%', pr: [2, 2, 0, 0] }}>
+                    {/* {!type === 'trial' && ( */}
                     <Heading
                         as="h2"
                         sx={{
-                            fontSize: 2,
+                            fontWeight: noDescription ? '400' : 'bold',
+                            fontSize: noDescription ? 1 : 2,
                             lineHeight: '1.1',
                         }}
                     >
                         {title || 'Banner Title'}
                     </Heading>
-                    <Text sx={{ fontSize: 1, color: 'fg.muted' }}>
-                        {children || 'Write your description.'}
-                    </Text>
+                    {/* )} */}
+                    {noDescription ? null : (
+                        <Text sx={{ fontSize: 1, color: 'fg.muted' }}>
+                            {children || 'Write your description.'}
+                        </Text>
+                    )}
                 </Box>
                 {actions.length !== 0 && (
                     <Box

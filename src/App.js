@@ -3,10 +3,10 @@ import { Routes, Route } from 'react-router-dom'
 import ColorModeSwitcher from './components/ColorModeSwitcher'
 import Navigation from './components/navigation/Navigation'
 import Banners from './pages/Banners'
-import Buttons from './pages/Buttons'
 import Dialogs from './pages/Dialogs'
 import DashboardPromo from './pages/DashboardPromo'
 import Tips from './pages/Tips'
+import Trials from './pages/Trials'
 
 function App() {
     const routes = [
@@ -15,8 +15,8 @@ function App() {
             element: <Banners />,
         },
         {
-            path: '/buttons',
-            element: <Buttons />,
+            path: '/tip',
+            element: <Tips />,
         },
         {
             path: '/promo',
@@ -26,9 +26,10 @@ function App() {
             path: '/dialog',
             element: <Dialogs />,
         },
+
         {
-            path: '/tip',
-            element: <Tips />,
+            path: '/trial',
+            element: <Trials />,
         },
     ]
     return (
